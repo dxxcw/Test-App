@@ -1,0 +1,12 @@
+.Abox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 8px auto;
+
+  height: 50px;
+  background-color: bisque;
+  border-radius: 15px;
+
+  cursor: pointer;
+}
