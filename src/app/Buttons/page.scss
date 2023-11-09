@@ -1,0 +1,28 @@
+.startBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 450px;
+  height: 65px;
+  border-radius: 15px;
+  margin-top: 15px;
+  background-color: #ff787c;
+  font-size: 21px;
+  cursor: pointer;
+
+  p,
+  a {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.startBtn {
+  transition: transform 0.5s;
+}
+
+.startBtn:hover {
+  transform: translateY(-5px);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
+}
