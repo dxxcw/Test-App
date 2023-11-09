@@ -1,7 +1,7 @@
 "use client";
-import Link from "next/link";
+
 import { useRouter } from "next/navigation";
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./page.scss";
 
 export default function CommonQuestion() {
@@ -12,6 +12,7 @@ export default function CommonQuestion() {
   >([]);
   const [page, setPage] = useState(1);
   const [title, setTitle] = useState<{ id: number; title: string }[]>([]);
+  const [score, setScroe] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -41,8 +42,11 @@ export default function CommonQuestion() {
     fetchData();
   }, [page]);
 
-  const updateQuestion = () => {
-    if (page < 11) {
+  const updateQuestion = (clickedItem) => {
+    const clickedScore = clickedItem.score;
+    setScroe((prevScore) => prevScore + clickedScore);
+
+    if (page <= 9) {
       setPage((prevPage) => prevPage + 1);
     } else {
       router.push("/Result");
@@ -57,7 +61,7 @@ export default function CommonQuestion() {
 
       {topics.map((t) => {
         return (
-          <div key={t.id} className="aBox" onClick={updateQuestion}>
+          <div key={t.id} className="aBox" onClick={() => updateQuestion(t)}>
             {t.text}
           </div>
         );
