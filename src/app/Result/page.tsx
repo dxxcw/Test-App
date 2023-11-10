@@ -1,11 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState } from "react";
-
+import useStore from "../store";
 import "./page.scss";
 
 export default function Result() {
-  const [score, setScore] = useState(25);
+  const { score } = useStore();
+
   const [result, setResult] = useState([
     {
       title: "이직을 추천합니다.",
@@ -32,18 +34,30 @@ export default function Result() {
     } else if (score > 20) {
       return result[2];
     }
+    return { title: "", contents: "" };
   };
 
   return (
-    <div className="mainContainer">
-      <div className="mainImg">
-        {/* <Image className="mainImg" src={mainImg} alt="설명" width={300} /> */}
+    <div className="resultContainer">
+      <div className="resultWrapper">
         <p className="mainTitle">{handleResult().title}</p>
+
+        <img
+          className="resultImg"
+          src={`/images/result${result.indexOf(handleResult())}.png`}
+          alt="logo image"
+        />
+
         <div className="subBgd">
           <p className="subTitle">{handleResult().contents}</p>
 
           <div className="shareWrapper">
             <p className="btnText">친구에게 결과 공유하기</p>
+            <div className="shareBox">
+              <div className="kakao">카카오</div>
+              <div className="gmail">Gmail</div>
+              <div className="tryAgain">Test</div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,36 +1,73 @@
 .qContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 420px;
+  height: 90%;
+  padding: 20px;
+
+  // border: 3px solid black;
+  // border-radius: 30px;
+  // background-color: #fff9fe;
+
   .qNum {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 30px;
+    font-size: 20px;
     font-weight: 700;
   }
 
   .qTitle {
-    font-size: 18px;
+    margin: 5px 0 0 5px;
+    font-size: 20px;
+    // color: #717171;
+    font-weight: 600;
   }
 
-  .aBox {
+  .qImageWrapper {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
 
-    width: 450px;
-    height: 65px;
-    border-radius: 15px;
-    margin-top: 15px;
-    background-color: #ff787c;
-    font-size: 16px;
-    cursor: pointer;
+    width: 400px;
+    height: 400px;
 
-    p,
-    a {
-      color: white;
-      text-decoration: none;
+    .qImg {
+      height: 300px;
     }
   }
 
+  .boxWrapper {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    width: 400px;
+    height: 260px;
+
+    .aBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 400px;
+      height: 55px;
+      border-radius: 15px;
+      // margin-top: 10px;
+      background-color: #dbcaf4;
+      color: #3d3d3d;
+
+      font-size: 14px;
+      -webkit-text-stroke: 0.1px #3d3d3d;
+      white-space: pre-wrap;
+      cursor: pointer;
+
+      p,
+      a {
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
   .aBox {
     transition: transform 0.5s;
   }
