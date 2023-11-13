@@ -46,6 +46,17 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat+Alternates:ital@1&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+KR:wght@200;400;500&display=swap"
           rel="stylesheet"
         />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="true"
+        />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <div className="mainContainer">

@@ -1,5 +1,10 @@
 import type { Metadata } from "next";
+import { Noto_Sans_KR } from "next/font/google";
 import "./globals.scss";
+
+const notoSansKr = Noto_Sans_KR({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Vocational Test",
@@ -15,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html className={notoSansKr.className} lang="en">
       <body>{children}</body>
     </html>
   );
