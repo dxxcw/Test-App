@@ -86,24 +86,31 @@ body {
           background-color: #f7e11d;
         }
 
-        .gmail {
+        .URL {
           display: flex;
           align-items: center;
           justify-content: center;
 
           width: 50px;
           height: 50px;
-          background-color: #db151f;
+
+          .UrlImg {
+            width: 40px;
+            cursor: pointer;
+          }
         }
 
-        .tryAgain {
+        .restart {
           display: flex;
           align-items: center;
           justify-content: center;
 
           width: 50px;
           height: 50px;
-          background-color: #dbcaf4;
+
+          .restartImg {
+            width: 35px;
+          }
         }
       }
     }

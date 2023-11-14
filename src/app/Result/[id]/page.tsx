@@ -2,8 +2,10 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import useStore from "@/app/store";
+import Link from "next/link";
+import Popup from "@/app/Popup/page";
 import "./page.scss";
 
 export default function Result({ params }) {
@@ -16,6 +18,19 @@ export default function Result({ params }) {
     contents: string;
     color: string;
   } | null>(null);
+
+  const [handlePopup, setHandlePopup] = useState(false);
+  const copyUrl = () => {
+    const currentUrl = window.location.href;
+    navigator.clipboard
+      .writeText(currentUrl)
+      .then(() => {
+        setHandlePopup(true);
+      })
+      .catch((error) => {
+        console.error("클립보드 복사 실패:", error);
+      });
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -64,7 +79,12 @@ export default function Result({ params }) {
   // };
 
   return (
-    <div className="resultContainer">
+    <div
+      className="resultContainer"
+      onClick={() => {
+        setHandlePopup(false);
+      }}
+    >
       <div className="resultWrapper">
         <div className="mainTitle">
           <p style={{ color: resultValue?.color }}>{resultValue?.title}</p>
@@ -72,7 +92,7 @@ export default function Result({ params }) {
 
         <img
           className="resultImg"
-          src={`/images/result${`${resultValue?.id}` - 1}.png`}
+          src={`/images/result${resultValue?.id - 1}.png`}
           alt="logo image"
         />
 
@@ -80,11 +100,20 @@ export default function Result({ params }) {
 
         <div className="subBgd">
           <div className="shareWrapper">
-            <p className="btnText">친구에게 결과 공유하기</p>
+            {/* <p className="btnText">친구에게 결과 공유하기</p> */}
             <div className="shareBox">
               <div className="kakao">카카오</div>
-              <div className="gmail">URL</div>
-              <div className="tryAgain">Test</div>
+              <div className="URL" onClick={() => copyUrl()}>
+                <img className="UrlImg" src="/images/link.png" alt="restart" />
+                {handlePopup && <Popup />}
+              </div>
+              <Link className="restart" href={"/"}>
+                <img
+                  className="restartImg"
+                  src="/images/restart.png"
+                  alt="restart"
+                />
+              </Link>
             </div>
           </div>
         </div>
