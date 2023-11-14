@@ -14,6 +14,17 @@ const useStore = create<ScoreType>((set) => ({
       return { score: newScore };
     });
   },
-}));
 
+  // resultNumber: () => {
+  //   return (state) => {
+  //     if (state.score < 11) {
+  //       return 0;
+  //     } else if (state.score > 10 && state.score < 21) {
+  //       return 1;
+  //     } else {
+  //       return 2;
+  //     }
+  //   };
+  // },
+}));
 export default useStore;

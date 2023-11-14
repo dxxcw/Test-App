@@ -8,16 +8,13 @@ import ProgressBar from "../ProgressBar/page";
 import "./page.scss";
 
 export default function CommonQuestion() {
-  const { updateScore } = useStore();
-
-  // console.log(updateScore);
-
+  const [page, setPage] = useState(1);
+  const [totalPage, setTotalPage] = useState(10);
+  const { score, updateScore } = useStore();
   const router = useRouter();
-
   const [topics, setTopics] = useState<
     { id: number; text: string; score: number }[]
   >([]);
-  const [page, setPage] = useState(1);
   const [title, setTitle] = useState<{ id: number; title: string }[]>([]);
 
   useEffect(() => {
@@ -48,6 +45,16 @@ export default function CommonQuestion() {
     fetchData();
   }, [page]);
 
+  const resultNumber = () => {
+    if (score < 11) {
+      return 1;
+    } else if (score > 10 && score < 21) {
+      return 2;
+    } else {
+      return 3;
+    }
+  };
+
   const updateQuestion = (clickedItem: {
     id: number;
     text: string;
@@ -56,17 +63,21 @@ export default function CommonQuestion() {
     const clickedScore = clickedItem.score;
     updateScore(clickedScore);
 
-    if (page <= 9) {
+    if (page < totalPage) {
       setPage((prevPage) => prevPage + 1);
     } else {
-      router.push("/Result");
+      goToResultPage();
     }
+  };
+
+  const goToResultPage = () => {
+    router.push(`/Result/${resultNumber()}`);
   };
 
   return (
     <div className="qContainer">
       {/* <p className="qNum">Q.{page}</p> */}
-      <ProgressBar />
+      <ProgressBar currentPage={page} totalPages={totalPage} />
       <p className="qTitle">{title[`${page - 1}`]?.title}</p>
 
       <div className="qImageWrapper">
@@ -77,7 +88,7 @@ export default function CommonQuestion() {
         {topics.map((t) => {
           return (
             <div key={t.id} className="aBox" onClick={() => updateQuestion(t)}>
-              {t.text}
+              <p>{t.text}</p>
             </div>
           );
         })}

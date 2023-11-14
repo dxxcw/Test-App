@@ -1,18 +1,24 @@
-.barContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.progressBarWrapper {
+  .progressBar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  width: 100%;
-  margin-bottom: 30px;
-
-  .barWrapper {
-    width: 90%;
-    height: 20px;
-    border: 1px solid darkgray;
+    margin-bottom: 30px;
+    width: 380px;
+    height: 10px;
+    background-color: #cecece;
     border-radius: 5px;
 
     .progress {
+      position: absolute;
+      left: 0;
+      height: 100%;
+      background-color: #f6c34c;
+      border-radius: 5px;
+
+      transition: width 1s ease;
     }
   }
 }

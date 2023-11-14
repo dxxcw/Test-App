@@ -20,8 +20,6 @@ body {
   align-items: center;
   flex-direction: column;
 
-  // background-color: beige;
-
   .resultWrapper {
     position: relative;
     display: flex;
@@ -43,11 +41,10 @@ body {
       height: 100px;
 
       p {
-        padding: 10px 20px;
+        padding: 10px 30px;
         border-radius: 30px;
         background-color: white;
-        color: #db151f;
-        font-size: 32px;
+        font-size: 28px;
         font-weight: 700;
       }
     }
@@ -58,37 +55,26 @@ body {
 
     .subTitle {
       text-align: center;
-      margin-bottom: 30px;
-      font-size: 20px;
+      margin: 0 0 30px 0;
+      font-size: 18px;
       color: #5b5b5b;
 
       white-space: pre-line;
     }
 
     .subBgd {
-      // position: absolute;
       display: flex;
       align-items: center;
       flex-direction: column;
       width: 95%;
       height: 250px;
-      // top: 60%;
 
-      // bottom: -90px;
       border-radius: 15px;
-      background-color: #ffbeb6;
-      background-image: linear-gradient(
-        90deg,
-        rgba(255, 255, 255, 0.75) 80%,
-        rgb(255, 255, 255) 100%
-      );
 
       .shareBox {
         display: flex;
         align-items: center;
         justify-content: center;
-
-        // padding-bottom: 20px;
 
         .kakao {
           display: flex;
