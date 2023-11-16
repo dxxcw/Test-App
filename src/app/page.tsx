@@ -1,7 +1,6 @@
 /* eslint-disable @next/next/no-page-custom-font */
 /* eslint-disable @next/next/no-sync-scripts */
 import Link from "next/link";
-import Image from "next/image";
 import Head from "next/head";
 
 import "./page.scss";
@@ -16,7 +15,16 @@ export default function Home() {
           content="지금 하는 일이 얼마나 잘 맞는지 알아보세요."
         />
         {/* 카카오 공유 */}
-
+        <script
+          src="https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.js"
+          integrity="sha384-Y2BJfyFHzxWwUOht5LBqgEusLOryH3F4Pi9MipRF6YWrrPBk5KLvfF9UbR0Ec2RD"
+          crossOrigin="anonymous"
+        >
+          <script>
+            Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY);
+            console.log(Kakao.isInitialized());
+          </script>
+        </script>
         {/* favicon */}
         <link
           rel="apple-touch-icon"

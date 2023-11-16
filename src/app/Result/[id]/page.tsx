@@ -71,11 +71,22 @@ export default function Result({ params }: ResultProps) {
 
         <div className="shareWrapper">
           <div className="shareBox">
-            <div className="kakao">카카오</div>
+            {/* 카카오 공유 */}
+            <a id="kakaotalk-sharing-btn" href="javascript:;">
+              <img
+                className="kakaoBtn"
+                src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
+                alt="카카오톡 공유 보내기 버튼"
+              />
+            </a>
+
+            {/* 링크 공유 */}
             <div className="URL" onClick={() => copyUrl()}>
               <img className="UrlImg" src="/images/link.png" alt="restart" />
               {handlePopup && <Popup />}
             </div>
+
+            {/* 다시 하기 */}
             <Link className="restart" href={"/"}>
               <img
                 className="restartImg"
