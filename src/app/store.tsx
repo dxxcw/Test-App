@@ -3,6 +3,8 @@ import { create } from "zustand";
 type ScoreType = {
   score: number;
   updateScore: (clickedScore: number) => void;
+  handlePopup: boolean;
+  setHandlePopup: (state: boolean) => boolean;
 };
 
 const useStore = create<ScoreType>((set) => ({
@@ -14,17 +16,10 @@ const useStore = create<ScoreType>((set) => ({
       return { score: newScore };
     });
   },
-
-  // resultNumber: () => {
-  //   return (state) => {
-  //     if (state.score < 11) {
-  //       return 0;
-  //     } else if (state.score > 10 && state.score < 21) {
-  //       return 1;
-  //     } else {
-  //       return 2;
-  //     }
-  //   };
-  // },
+  handlePopup: false,
+  setHandlePopup: (state) => {
+    set({ handlePopup: state });
+    return state;
+  },
 }));
 export default useStore;

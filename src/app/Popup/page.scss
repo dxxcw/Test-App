@@ -1,33 +1,84 @@
+.popupBgd {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: transparent;
+  animation: fadeIn 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; /* 등장 애니메이션 설정 */
+}
+
+/* 팝업 내용 레이어 스타일 */
 .PopupWrapper {
-  position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
+  position: fixed;
   z-index: 999;
-  top: 70%;
-
+  top: calc(50vh - 100px); /* 화면 상단에서 50% 지점에서 100px 위로 */
+  left: calc(50vw - 140px); /* 화면 왼쪽에서 50% 지점에서 140px 왼쪽으로 */
   width: 300px;
   height: 150px;
+  padding: 10px 0;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 15px;
+  animation: scaleUp 0.5s cubic-bezier(0.165, 0.84, 0.44, 1) forwards; /* 등장 애니메이션 설정 */
 
   .big {
     display: flex;
+    align-items: center;
 
     .bigText {
       margin: 0;
-      font-size: 20px;
+      font-size: 18px;
     }
 
     .checkImg {
       width: 20px;
       height: 20px;
+      margin-right: 10px;
     }
   }
 
   .small {
     margin: 0;
-    font-size: 16px;
+    font-size: 14px;
+  }
+
+  .closeBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-items: flex-end;
+    width: 45px;
+    height: 30px;
+    border-radius: 10px;
+    color: white;
+    background-color: #7bc262;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+/* 등장 시 적용되는 배경 레이어 페이드 애니메이션 */
+@keyframes fadeIn {
+  0% {
+    background: transparent; /* 투명 배경 */
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.5); /* 50% 불투명한 검은 배경 */
+  }
+}
+
+/* 등장 시 적용되는 팝업 내용 스케일 애니메이션 */
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.8) translateY(1000px); /* 크기 0.8배로 축소하고 y축으로 1000px 아래로 이동 */
+    opacity: 0; /* 투명도 0% */
+  }
+  100% {
+    transform: scale(1) translateY(0); /* 원래 크기로 되돌리고 이동 없음 */
+    opacity: 1; /* 투명도 100% */
   }
 }

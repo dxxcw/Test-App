@@ -15,12 +15,9 @@ export default function Home() {
           name="description"
           content="지금 하는 일이 얼마나 잘 맞는지 알아보세요."
         />
-        <script
-          src="https://t1.kakaocdn.net/kakao_js_sdk/2.4.0/kakao.min.js"
-          integrity="sha384-mXVrIX2T/Kszp6Z0aEWaA8Nm7J6/ZeWXbL8UpGRjKwWe56Srd/iyNmWMBhcItAjH"
-          crossOrigin="anonymous"
-        ></script>
+        {/* 카카오 공유 */}
 
+        {/* favicon */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -40,8 +37,13 @@ export default function Home() {
         />
         <link rel="manifest" href="/site.webmanifest" />
 
+        {/* font */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat+Alternates:ital@1&family=Nanum+Pen+Script&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&family=Noto+Serif+KR:wght@200;400;500&display=swap"
           rel="stylesheet"
@@ -51,7 +53,7 @@ export default function Home() {
         <link
           rel="preconnect"
           href="https://fonts.gstatic.com"
-          crossOrigin="true"
+          crossOrigin="anonymous"
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap"
