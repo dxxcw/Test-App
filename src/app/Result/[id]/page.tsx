@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import useStore from "@/app/store";
 import Link from "next/link";
 import Popup from "@/app/Popup/page";
+import { KakaoShare } from "@/app/KakaoShare";
 import "./page.scss";
 
 interface ResultProps {
@@ -72,13 +73,7 @@ export default function Result({ params }: ResultProps) {
         <div className="shareWrapper">
           <div className="shareBox">
             {/* 카카오 공유 */}
-            <a id="kakaotalk-sharing-btn" href="javascript:;">
-              <img
-                className="kakaoBtn"
-                src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
-                alt="카카오톡 공유 보내기 버튼"
-              />
-            </a>
+            <KakaoShare />
 
             {/* 링크 공유 */}
             <div className="URL" onClick={() => copyUrl()}>

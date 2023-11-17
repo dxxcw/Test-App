@@ -13,6 +13,7 @@ export const metadata: Metadata = {
     icon: "/favicon.ico",
   },
 };
+
 declare global {
   interface Window {
     Kakao: any;
