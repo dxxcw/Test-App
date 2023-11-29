@@ -73,7 +73,9 @@ export default function Result({ params }: ResultProps) {
         <div className="shareWrapper">
           <div className="shareBox">
             {/* 카카오 공유 */}
-            <KakaoShare />
+            <div className="kakaoBtn">
+              <KakaoShare />
+            </div>
 
             {/* 링크 공유 */}
             <div className="URL" onClick={() => copyUrl()}>

@@ -1,6 +1,9 @@
 import { useEffect } from "react";
+import useStore from "./store";
 
 export const KakaoShare = () => {
+  const { score } = useStore();
+
   useEffect(() => {
     // Kakao 스크립트 동적으로 추가
     const script = document.createElement("script");
@@ -14,16 +17,37 @@ export const KakaoShare = () => {
       if (window.Kakao) {
         const kakao = window.Kakao;
         if (!kakao.isInitialized()) {
-          kakao.init("25e535afe51ca02bd5e6ea2ace81f926"); // 사용하려는 앱의 JavaScript 키 입력
+          kakao.init(process.env.NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY); // 사용하려는 앱의 JavaScript 키 입력
         }
 
-        kakao.Share.createCustomButton({
-          container: "#kakaotalk-sharing-btn",
-          templateId: 100577, // 카카오 디벨로퍼스에서 생성한 템플릿 ID 입력
-          templateArgs: {
-            title: "${userId}",
-          },
-        });
+        if (score < 11) {
+          kakao.Share.createCustomButton({
+            container: "#kakaotalk-sharing-btn",
+            templateId: 100894,
+            templateArgs: {
+              title: "테스트 결과입니다!",
+              desc: "지금 하는 일이 얼마나 잘 맞는지 알아보세요.",
+            },
+          });
+        } else if (score > 10 && score < 21) {
+          kakao.Share.createCustomButton({
+            container: "#kakaotalk-sharing-btn",
+            templateId: 100893,
+            templateArgs: {
+              title: "테스트 결과입니다!",
+              desc: "지금 하는 일이 얼마나 잘 맞는지 알아보세요.",
+            },
+          });
+        } else {
+          kakao.Share.createCustomButton({
+            container: "#kakaotalk-sharing-btn",
+            templateId: 100577,
+            templateArgs: {
+              title: "테스트 결과입니다!",
+              desc: "지금 하는 일이 얼마나 잘 맞는지 알아보세요.",
+            },
+          });
+        }
       }
     };
   }, []);
