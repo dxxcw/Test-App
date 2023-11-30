@@ -1,6 +1,6 @@
 ![waving](https://capsule-render.vercel.app/api?type=waving&height=200&fontAlignY=40&text=Vocational-Test&color=gradient)
 
-## [🔗 Portfolio Link](https://www.notion.so/summer-study/Vocational-Test-670326c70ad944938aeab600f1b72834)
+# [🔗 Portfolio Link](https://www.notion.so/summer-study/Vocational-Test-670326c70ad944938aeab600f1b72834)
 
 ## 👩‍💻 개발 기간 및 인원
 - 개발 기간 : 2023/10/26 ~ 2023/11/30
