@@ -5,7 +5,6 @@ export const KakaoShare = () => {
   const { score } = useStore();
 
   useEffect(() => {
-    // Kakao 스크립트 동적으로 추가
     const script = document.createElement("script");
     script.src = "https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js";
     script.integrity =
@@ -17,7 +16,7 @@ export const KakaoShare = () => {
       if (window.Kakao) {
         const kakao = window.Kakao;
         if (!kakao.isInitialized()) {
-          kakao.init(process.env.NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY); // 사용하려는 앱의 JavaScript 키 입력
+          kakao.init("25e535afe51ca02bd5e6ea2ace81f926");
         }
 
         if (score < 11) {
@@ -54,7 +53,7 @@ export const KakaoShare = () => {
 
   return (
     <div className="mainContainer">
-      <a id="kakaotalk-sharing-btn" href="javascript:;">
+      <a id="kakaotalk-sharing-btn" href="#">
         <img
           src="https://developers.kakao.com/assets/img/about/logos/kakaotalksharing/kakaotalk_sharing_btn_medium.png"
           alt="카카오톡 공유 보내기 버튼"
