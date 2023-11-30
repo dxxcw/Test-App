@@ -1,4 +1,6 @@
 ![waving](https://capsule-render.vercel.app/api?type=waving&height=200&fontAlignY=40&text=Vocational-Test&color=gradient)
+## Portfolio Link 
+https://www.notion.so/summer-study/Vocational-Test-670326c70ad944938aeab600f1b72834
 
 ## 👩‍💻 개발 기간 및 인원
 - 개발 기간 : 2023/10/26 ~ 2023/11/30
@@ -7,7 +9,7 @@
 ## 프로잭트 개요
 - 프로젝트명 : Vocational Test
 - 현재 직장 만족도를 테스트해보는 웹 사이트
-### ✔️목표
+### ✔️ 목표
 - Next.js와 Typescript로 미니 프로젝트 만들기
 - 간단한 테스트 사이트 구현해보기
 - 카카오 공유 기능 사용해보기
