@@ -16,7 +16,7 @@ export const KakaoShare = () => {
       if (window.Kakao) {
         const kakao = window.Kakao;
         if (!kakao.isInitialized()) {
-          kakao.init(process.env.NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY);
+          kakao.init("25e535afe51ca02bd5e6ea2ace81f926");
         }
 
         if (score < 11) {
