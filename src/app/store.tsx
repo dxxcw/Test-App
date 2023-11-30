@@ -12,7 +12,6 @@ const useStore = create<ScoreType>((set) => ({
   updateScore: (clickedScore) => {
     set((state) => {
       const newScore = state.score + clickedScore;
-      console.log(`Clicked Score: ${clickedScore}, New Score: ${newScore}`);
       return { score: newScore };
     });
   },

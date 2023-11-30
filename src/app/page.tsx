@@ -14,18 +14,6 @@ export default function Home() {
           name="description"
           content="지금 하는 일이 얼마나 잘 맞는지 알아보세요."
         />
-
-        {/* 카카오 공유 */}
-        {/* <script
-          src="https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js"
-          integrity="sha384-kYPsUbBPlktXsY6/oNHSUDZoTX6+YI51f63jCPEIPFP09ttByAdxd2mEjKuhdqn4"
-          crossOrigin="anonymous"
-        ></script>
-
-        <script>
-          Kakao.init(process.env.NEXT_PUBLIC_KAKAO_JAVASCRIPT_KEY);
-          console.log(Kakao.isInitialized());
-        </script> */}
       </Head>
 
       <div className="mainContainer">
