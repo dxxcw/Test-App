@@ -13,6 +13,11 @@
 - Next.js와 Typescript로 미니 프로젝트 만들기
 - 간단한 테스트 사이트 구현해보기
 - 카카오 공유 기능 사용해보기
+### 📚 기술 스택
+|                                             TypeScript                                             |                                                 Next.js                                                 |                                              SCSS                                               |
+| :----------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
+| <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566913457/noticon/eh4d0dnic4n1neth3fui.png" width="35" height="35" /> | <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566879300/noticon/fvty9lnsbjol5lq9u3by.svg" alt="icon" width="35" height="35" /> | <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566911998/noticon/pgp6gfml2syj2xujx5qp.png" alt="icon" width="35" height="35" /> |
+
 
 ## 🏋️‍♀️ 구현 기능
 - 테스트 진척도를 확인 할 수 있는 Progress Bar 구현
@@ -27,8 +32,3 @@
 <img width="561" alt="스크린샷 2023-11-29 18 12 40" src="https://github.com/dxxcw/Test-App/assets/122979057/1d5be060-ae58-4dd2-84e5-8b9412b1a8a5">
 <img width="561" alt="스크린샷 2023-11-29 18 18 34" src="https://github.com/dxxcw/Test-App/assets/122979057/8d6b025f-bad6-4312-88ec-1a16395121cf">
 <img width="561" alt="스크린샷 2023-11-29 19 12 12" src="https://github.com/dxxcw/Test-App/assets/122979057/f2ea87b7-cabb-4f50-a1c8-34dda0ee6412">
-
-## 📚 기술 스택
-|                                             TypeScript                                             |                                                 Next.js                                                 |                                              SCSS                                               |
-| :----------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------: | :---------------------------------------------------------------------------------------------: |
-| <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566913457/noticon/eh4d0dnic4n1neth3fui.png" width="45" height="45" /> | <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566879300/noticon/fvty9lnsbjol5lq9u3by.svg" alt="icon" width="45" height="45" /> | <img src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1566911998/noticon/pgp6gfml2syj2xujx5qp.png" alt="icon" width="45" height="45" /> |
