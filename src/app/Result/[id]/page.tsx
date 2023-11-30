@@ -4,7 +4,7 @@
 import { useEffect, useState } from "react";
 import useStore from "@/app/store";
 import Link from "next/link";
-import Popup from "@/app/Popup/page";
+import Popup from "@/component/Popup/page";
 import { KakaoShare } from "@/app/KakaoShare";
 import "./page.scss";
 

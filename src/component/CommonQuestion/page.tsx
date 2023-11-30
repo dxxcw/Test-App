@@ -3,7 +3,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import useStore from "../store";
+import useStore from "../../app/store";
 import ProgressBar from "../ProgressBar/page";
 import "./page.scss";
 
